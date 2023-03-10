@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c373e2c5-0c41-40d0-a393-45b5be4dc92e" name="jp" url="http://localhost:8888">
+        <fileTransfer mountedRoot="C:\Users\jpryd\Documents\odin\odin-calculator" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
