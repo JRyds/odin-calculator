@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>Calculon 2027</title>
 </head>
 
@@ -13,43 +16,47 @@
 
     <section class="calculator">
         <!-- Display Window -->
-        <div class="display"></div>
+        <div class="display">
+
+            <div class="display-screen">
+
+
+            </div>
+
+
+            <button class="icons memory"><i class="material-icons">memory</i></button>
+            <button class="icons converter"><i class="material-icons">swap_horiz</i></button>
+            <button class="icons scientific"><i class="material-icons">calculate</i></button>
+            <button class="icons delete"><i class="material-icons">backspace</i></button>
+
+
+
+        </div>
 
 
         <!-- Buttons -->
         <div class="keypad">
+            <button class="button clear">C</button>
+            <button class="button parentheses operator">( )</button>
+            <button class="button percent operator">%</button>
+            <button class="button divide operator">÷</button>
             <button class="button number9">7</button>
             <button class="button number7">8</button>
             <button class="button number8">9</button>
+            <button class="button multiply operator">×</button>
             <button class="button number4">4</button>
             <button class="button number5">5</button>
             <button class="button number6">6</button>
+            <button class="button subtract operator">-</button>
             <button class="button number3">1</button>
             <button class="button number2">2</button>
             <button class="button number1">3</button>
+            <button class="button add operator">+</button>
+            <button class="button plus-minus operator">+/-</button>
             <button class="button number0">0</button>
             <button class="button decimal">.</button>
-        </div>
-
-        <div class="arithmetic-operators">
-            <!-- Arithmetic buttons: + - * / -->
-            <button class="button add">+</button>
-            <button class="button subtract">-</button>
-            <button class="button multiply">*</button>
-            <button class="button divide">/</button>
             <button class="button equals">=</button>
-
         </div>
-
-        <div class="other-operations">
-            <!-- Other operation buttons: Parentheses, +/-, % -->
-            <button class="button parentheses">()</button>
-            <button class="button percent">%</button>
-            <button class="button plus-minus">+/-</button>
-            <button class="button decimal">.</button>
-            <!-- Add more if needed -->
-        </div>
-
     </section>
 
 
