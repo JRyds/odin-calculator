@@ -69,12 +69,13 @@ body {
     /* background-color: black; */
 
     width: 90%;
-    max-width: 350px;
+    max-width: 325px;
     height: 600px;
 
   }
 
   .keypad {
+    /* grid display of 4 columns by 5 */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -83,10 +84,10 @@ body {
     padding: 5px;
   }
 
-  .button {
+  .keypad > .button {
     font-family: 'Lato', sans-serif;
-    font-size: 28px; /* Adjust the size as needed */
-    font-weight: 400; /* Use bold for better readability */
+    font-size: 28px; 
+    font-weight: 400;
 
     display: flex; 
     justify-content: center; 
@@ -99,7 +100,7 @@ body {
     border-radius: 50%;
 
     background-color: #111111;
-    color: rgb(226, 228, 228);
+    color: #e2e4e4;
 
     transition: font-size 0.5s;
     
@@ -110,23 +111,23 @@ body {
     font-size: 16px;
   }
 
-  .clear {
+  .keypad .clear {
     color: #b92121;
   }
 
-  .equals {
+  .keypad .equals {
     background-color: #586d3e;
     font-size: 55px;
     font-weight: 400;
   }
 
-  .operator {
+  .keypad .operator {
     color: #889974;
     font-size: 40px;
     font-weight: 400;
   }
 
-  .parentheses,
+  .keypad .parentheses,
   .percent {
     font-size: 24px;
     font-weight: 700;
@@ -134,34 +135,62 @@ body {
 
 
   .display {
+    /* area above buttons, includes the function button area and the actual calculation display area
+    this is 17 columns x 8 rows, which allows finer control on placing the function buttons*/
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-column: 1 / 5; /* From column line 1 to column line 5 */
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-column: 1 / 5; 
     grid-row: 1 / 3; 
     background-color: rgb(0, 0, 0);
   }
 
   .display-screen {
+    /*the area where the numbers are displayed. 8 columns by 7 leaving one row below for 
+    the function buttons*/
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(8, auto);
-    grid-column: 1 / 5; /* From column line 1 to column line 5 */
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column: 1 / 19; 
     grid-row: 1 / 8; 
 
   }
 
-  .icons {
-    color: aliceblue;
-
+  .function-buttons {
+    color: #e2e4e4;
+    margin: 0;
+    padding: 0;
   }
 
- 
-
-.display-icons {
-  grid-column: 1 / 5; /* Span across all 4 columns */
-  display: flex;
-  font-size: 1rem;
-  
-  
+  .function-buttons .material-icons {
+    font-weight: 100;
+    font-size: 16px;
+    
 }
+
+  .display .delete {
+    grid-column: 16;
+    color: #586d3e;
+  }
+
+  .display .scientific {
+    grid-column: 9;
+  }
+
+  .display .converter {
+    grid-column: 6;
+  }
+
+  .display .history {
+    grid-column: 3;
+    
+  }
+
+  .display .border-line {
+    grid-column: 2 / 18; /* Span from column 3 to column 18 (inclusive) */
+    grid-row: 9 / 10; /* Position at line 9 */
+    border-top: 1px solid #e2e4e4; /* Solid white border, adjust thickness and color as needed */
+}
+   
+
+

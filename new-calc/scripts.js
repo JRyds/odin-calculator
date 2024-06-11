@@ -6,7 +6,8 @@ class Calculator {
     // Evaluates the expression and stores the result.
     // Handles clearing of the expression.
     constructor() {
-
+        this.expression = ""; //current expression
+        this.result = null; //current result
     }
 
     // Add your calculator methods here
@@ -14,11 +15,14 @@ class Calculator {
 
 class Display {
     constructor() {
-        // Add display properties and methods here
-    }
+        constructor(displayElement) {
+            this.displayElement = displayElement;
+        }
 
-    // Add display methods here
-}
+        updateDisplay(content) {
+            this.displayElement.innerText = content;
+        }
+    }
 
 class Buttons {
     constructor() {
